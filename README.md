@@ -2,6 +2,15 @@
 
 > A Vue.js project
 
+## Environment
+
+`Node >= 6`
+
+## Start
+
+ - Clone or download this repository
+ - Enter your local directory, and install dependencies:
+
 ## Build Setup
 
 ``` bash
