@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1146px" height="652px" viewBox="0 0 1146 652" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>laptop</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-0.9%" y="-1.2%" width="101.9%" height="103.3%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.125490196   0 0 0 0 0.129411765   0 0 0 0 0.152941176  0 0 0 0.12 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <linearGradient x1="50%" y1="96.2419735%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#202127" stop-opacity="0.03" offset="100%"></stop>
+        </linearGradient>
+        <path d="M0,39.0684416 C0,17.4915371 17.5127207,0 39.1048362,0 L873.308957,0 C894.905962,0 912.413793,17.4919265 912.413793,39.0684416 L912.413793,576.842037 C912.413793,598.418941 894.905107,615.910478 873.308295,615.910478 L39.1054986,615.910478 C17.5081281,615.910478 0,598.418552 0,576.842037 L0,39.0684416 Z" id="path-3"></path>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+        <path d="M0,600.939707 C0,595.90356 4.0850905,591.820956 9.12806877,591.820956 L1124.87193,591.820956 C1129.91322,591.820956 1134,595.907891 1134,600.939707 L1134,615.910478 C1134,629.214754 1123.20478,640 1109.88344,640 L24.1115008,640 C10.7950866,640 0,629.217679 0,615.910478 L0,600.939707 Z" id="path-6"></path>
+        <filter x="-0.4%" y="-8.3%" width="100.7%" height="116.6%" filterUnits="objectBoundingBox" id="filter-7">
+            <feGaussianBlur stdDeviation="3" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="-2" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.156862745   0 0 0 0 0.168627451   0 0 0 0 0.192156863  0 0 0 0.06 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-8">
+            <stop stop-color="#FF8E64" offset="0%"></stop>
+            <stop stop-color="#FFE641" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-147.000000, -997.000000)">
+        <g id="Video" transform="translate(153.000000, 839.000000)">
+            <g id="Device" transform="translate(0.000000, 161.000000)">
+                <g id="laptop" filter="url(#filter-1)">
+                    <g id="Screen-Base" transform="translate(110.793103, 0.000000)">
+                        <mask id="mask-4" fill="white">
+                            <use xlink:href="#path-3"></use>
+                        </mask>
+                        <g id="Mask">
+                            <use fill="#FFFFFF" xlink:href="#path-3"></use>
+                            <use fill="url(#linearGradient-2)" xlink:href="#path-3"></use>
+                        </g>
+                        <rect id="Shadow" fill="url(#linearGradient-5)" opacity="0.049999997" mask="url(#mask-4)" x="0" y="578.148525" width="912.413793" height="32.5534079"></rect>
+                    </g>
+                    <g id="Base">
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-6"></use>
+                        <use fill="url(#linearGradient-2)" fill-rule="evenodd" xlink:href="#path-6"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-7)" xlink:href="#path-6"></use>
+                    </g>
+                    <path d="M483.57931,591.820956 L650.42069,591.820956 L650.42069,596.378433 C650.42069,598.895458 648.384141,600.93591 645.855845,600.93591 L488.147227,600.93591 C485.624436,600.93591 483.57931,598.890337 483.57931,596.378433 L483.57931,591.820956 Z" id="Shape" fill="#E7E8EA"></path>
+                    <path d="M147.941379,52.0904779 C147.941379,48.8549448 150.570005,46.2258393 153.801478,46.2258393 L980.198522,46.2258393 C983.437454,46.2258393 986.058621,48.8490921 986.058621,52.0904779 L986.058621,565.122137 C986.058621,568.35767 983.429995,570.986775 980.198522,570.986775 L153.801478,570.986775 C150.562546,570.986775 147.941379,568.363522 147.941379,565.122137 L147.941379,52.0904779 Z" id="Screen-Border" fill="#E7E8EA"></path>
+                    <path d="M149.896552,52.0904779 L149.896552,565.122137 C149.896552,567.287285 151.644847,569.033571 153.801478,569.033571 L980.198522,569.033571 C982.346765,569.033571 984.103448,567.282362 984.103448,565.122137 L984.103448,52.0904779 C984.103448,49.9253295 982.355153,48.1790437 980.198522,48.1790437 L153.801478,48.1790437 C151.653235,48.1790437 149.896552,49.9302525 149.896552,52.0904779 Z" id="1280x800" fill="url(#linearGradient-8)" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
