@@ -125,31 +125,21 @@ export default {
         //{ id: 6, name: 'Feature 6', description: 'Description6 description6 description6 description6 description6', gradient: '#5134B2 0%,#B175EB 100%', icon: 'sliders-h' },
       ],
       leaders: [
-        { id: 1, title: 'CTO', name: 'Mark Su', photo: './src/assets/mark.png', isLeader: true, descript: 'Brief:consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacu' },
-        { id: 2, title: 'CTO', name: 'Mark Su', photo: './src/assets/mark.png', isLeader: true, descript: 'Brief:consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacu' },
-        { id: 3, title: 'CTO', name: 'Mark Su', photo: './src/assets/mark.png', isLeader: true, descript: 'Brief:consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacu' },
+        { id: 1, title: 'CEO', name: 'Josh Sheng Chen', photo: './src/assets/members/CEO.png', isLeader: true, descript: 'Mr. Josh Sheng Chen is the Co-founder and Executive Chairman of 21Vianet Group, Inc.(VNET). In 2016, Mr. Chen established WiFire Group providing an innovative and proprietary network solution using the blockchain protocol to provide a unique digital ID system to ultra-connected smart cities. Combining data centers with block chain will usher in a new generation of strategically relevant and innovation-driven data centers.' },
+        { id: 2, title: 'CTO', name: 'Steve Shih-Wei Liao', photo: './src/assets/members/CTO.png', isLeader: true, descript: "22 years in Silicon Valley, Stanford, Google and Intel. Participated in Intel's super-thread technology research and development and parallel computing and compiler optimization development. Once used machine learning technology to help Google improve data center utilization, but also the original author of Android Compiler, Virtual Machine, RenderScript Engine, but also because of the contribution to Android and Google's highest founder of the award. Return to Stanford Research Blockchain and FinTech in 2013, Blockchain and FinTech at Taiwan University in 2015 to nurture Taiwanese blockchain talent." },
+        { id: 3, title: 'Lead Engineer', name: 'Mark Su', photo: './src/assets/members/TechLead.png', isLeader: true, descript: 'Brief:consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacu' },
       ],
       members: [
-        { id: 1, title: 'CTO', name: 'Mark Su', photo: './src/assets/mark.png' },
-        { id: 2, title: 'CTO', name: 'Mark Su', photo: './src/assets/mark.png' },
-        { id: 3, title: 'CTO', name: 'Mark Su', photo: './src/assets/mark.png' },
-        { id: 4, title: 'CTO', name: 'Mark Su', photo: './src/assets/mark.png' },
-        { id: 5, title: 'CTO', name: 'Mark Su', photo: './src/assets/mark.png' },
-        { id: 6, title: 'CTO', name: 'Mark Su', photo: './src/assets/mark.png' },
-        { id: 7, title: 'CTO', name: 'Mark Su', photo: './src/assets/mark.png' },
-        { id: 8, title: 'CTO', name: 'Mark Su', photo: './src/assets/mark.png' },
-        { id: 9, title: 'CTO', name: 'Mark Su', photo: './src/assets/mark.png' },
-        { id: 10, title: 'CTO', name: 'Mark Su', photo: './src/assets/mark.png' },
-        { id: 11, title: 'CTO', name: 'Mark Su', photo: './src/assets/mark.png' },
-        { id: 12, title: 'CTO', name: 'Mark Su', photo: './src/assets/mark.png' },
-        { id: 13, title: 'CTO', name: 'Mark Su', photo: './src/assets/mark.png' },
-        { id: 14, title: 'CTO', name: 'Mark Su', photo: './src/assets/mark.png' },
-        { id: 15, title: 'CTO', name: 'Mark Su', photo: './src/assets/mark.png' },
-        { id: 16, title: 'CTO', name: 'Mark Su', photo: './src/assets/mark.png' },
-        { id: 17, title: 'CTO', name: 'Mark Su', photo: './src/assets/mark.png' },
-        { id: 18, title: 'CTO', name: 'Mark Su', photo: './src/assets/mark.png' },
-        { id: 19, title: 'CTO', name: 'Mark Su', photo: './src/assets/mark.png' },
-        { id: 20, title: 'CTO', name: 'Mark Su', photo: './src/assets/mark.png' },
+        { id: 1, title: 'Developer', name: 'Anderson Chen', photo: './src/assets/members/Engineer_A.png' },
+        { id: 2, title: 'Developer', name: 'Hank Yang', photo: './src/assets/anonymous.jpg' },
+        { id: 3, title: 'Developer', name: 'Jack Lee', photo: './src/assets/members/Engineer_JK.jpg' },
+        { id: 4, title: 'Developer', name: 'James Hsiao', photo: './src/assets/anonymous.jpg' },
+        { id: 5, title: 'Developer', name: 'Jiyi Wu', photo: './src/assets/anonymous.jpg' },
+        { id: 6, title: 'Developer', name: 'Josh Chu', photo: './src/assets/anonymous.jpg' },
+        { id: 7, title: 'Developer', name: 'Masato Wang', photo: './src/assets/members/Engineer_M.jpg' },
+        { id: 8, title: 'Developer', name: 'Steven Yang', photo: './src/assets/anonymous.jpg' },
+        { id: 9, title: 'Developer', name: 'Totoro Chen', photo: './src/assets/members/PM.jpg' },
+        { id: 10, title: 'DevOps', name: 'BM Wu', photo: './src/assets/anonymous.jpg' },
       ],
       questions: [
         { id: 1, title: 'What is Pallet?', content: 'Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains.' },
@@ -394,7 +384,9 @@ li {
     margin: 0 auto 50px;
     text-align: center;
     .avatar {
-      display: inline-block;      
+      display: inline-block;   
+      vertical-align: top;   
+      text-align: center;
     }
     & + .group {
       text-align: left;
