@@ -2,6 +2,7 @@
   #app
     .container
       background(flat-color="transparent", bg-image="./src/assets/bg.svg").home
+        img.hidden(src="./assets/bg.svg")
         headbar
         .logo
           img(src="./assets/logo.png")
@@ -142,26 +143,26 @@ export default {
         { id: 10, title: 'DevOps', name: 'BM Wu', photo: './src/assets/anonymous.jpg' },
       ],
       questions: [
-        { id: 1, title: 'What is Pallet?', content: 'Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains.' },
-        { id: 2, title: 'Who is building Palliums?', content: 'Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains.' },
-        { id: 3, title: 'Is Palliums open source?', content: 'Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains.' },
-        { id: 4, title: 'What features do Palliums have?', content: 'Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains.' },
-        { id: 5, title: 'How does the Palliums Token distribution work?', content: 'Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains.' },
-        { id: 6, title: 'How can I participate in the Palliums Token distribution?', content: 'Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains.' },
-        { id: 7, title: 'What is token sale time schedule?', content: 'Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains.' },
-        { id: 8, title: 'What BTC compatible wallets are recommended?', content: 'Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains.' },
-        { id: 9, title: 'What are advantages of Palliums?', content: 'Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains.' },
-        { id: 10, title: 'Are Palli transferable? Where are Palli traded?', content: 'Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains.' },
-        { id: 11, title: 'What is roadmap?', content: 'Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains. Pallet is bridge of blockchains.' },
+        { id: 1, title: 'What is Pallet?', content: 'The core action of the Pallet Technology consist of the following three parts. First, build up such basic token, like Palli, for general usage. Second, strategically enable infrastructure-level services that can be used in many applications. The analogy of the first step and the second step is like Android and GMS (Google Mobile Services), Third, finally empower governance bodies and people communities to create their own Pallium social contracts on the platforms and blockchains they so choose. All the world computers above can be interacted through the open-source Pallium technology. Thus, today’s global internet can generally grow into a world of internet and interchain.' },
+        { id: 2, title: 'Who is building Pallet?', content: 'Cepave, DiQi, Gcoin, VNET.' },
+        { id: 3, title: 'Is Pallet open source?', content: 'https://github.com/palliums' },
+        { id: 4, title: 'What features do Pallet have?', content: 'Pallium’s first step shall bring you a decentralized/distributed contract execution environment that supports secure and private contract execution on multiple blockchains to achieve on-chain, inter-chain, and even off-chain consideration exchange, and an inclusive environment that supports multiple programming languages and multiple execution platforms to allow the contracts to be triggered anytime and anywhere.' },
+        { id: 5, title: 'How does the Pallet Token distribution work?', content: 'Initial Palli will be produced in the ICO. We also can get corresponding Palli in return by investing Bitcoin or Ether in the Palli contract.It’s only allowed to acquire Palli by joining the ICO, being a notary to collect transaction fee and buying it.(+增發)Palli is valuable, because Palli can be used to “buy” the computing power of Notary for transaction verification. Palli Glu is priced by the price of computation power (e.g., PC or cloud service). Competition among Notaries may result in discount and make Palli more valuable. In addition, Palli can be used as the medium of value transferring like Settlement currency.' },
+        { id: 6, title: 'How can I participate in the Pallet Token distribution?', content: 'Please follow our official website for ICO information.' },
+        { id: 7, title: 'What is token sale time schedule?', content: '2018/1/20~2/19' },
+        { id: 8, title: 'What BTC compatible wallets are recommended?', content: 'https://bitcoin.org/en/choose-your-wallet' },
+        { id: 9, title: 'What are advantages of Pallet?', content: 'TBD' },
+        { id: 10, title: 'Are Palli transferable? Where are Palli traded?', content: 'TBD' },
+        { id: 11, title: 'What is roadmap?', content: 'TBD' },
       ],
       medias: [
         { id: 1, type: 'img', title: 'Title', content: './src/assets/bg-blue.svg' },
-        { id: 2, title: 'Title', content: 'Palliums is bridge of blockchains.Palliums is bridge of blockchains.Palliums is bridge of blockchains.Palliums is bridge of blockchains.Palliums is bridge of blockchains.Palliums is' },
+        { id: 2, title: 'Title', content: 'Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is' },
         { id: 3, type: 'img', title: 'Title', content: './src/assets/bg-orange.svg' },
-        { id: 4, title: 'Title', content: 'Palliums is bridge of blockchains.Palliums is bridge of blockchains.Palliums is bridge of blockchains.Palliums is bridge of blockchains.Palliums is bridge of blockchains.Palliums is' },
-        { id: 5, title: 'Title', content: 'Palliums is bridge of blockchains.Palliums is bridge of blockchains.Palliums is bridge of blockchains.Palliums is bridge of blockchains.Palliums is bridge of blockchains.Palliums is' },
+        { id: 4, title: 'Title', content: 'Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is' },
+        { id: 5, title: 'Title', content: 'Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is' },
         { id: 6, type: 'img', title: 'Title', content: './src/assets/bg-green.svg' },
-        { id: 7, title: 'Title', content: 'Palliums is bridge of blockchains.Palliums is bridge of blockchains.Palliums is bridge of blockchains.Palliums is bridge of blockchains.Palliums is bridge of blockchains.Palliums is' },
+        { id: 7, title: 'Title', content: 'Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is' },
         { id: 8, type: 'img', title: 'Title', content: './src/assets/bg-magenta.svg' },
       ],
       bricks: [1, 2, 3, 4, 5, 6],
@@ -208,6 +209,10 @@ body {
   z-index: 999;
   width: 90px;
   height: 90px;
+}
+
+img.hidden {
+  display: none;
 }
 
 h1 {
