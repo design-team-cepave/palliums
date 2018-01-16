@@ -6,7 +6,6 @@ const publicPath = ''
 
 module.exports = (options = {}) => ({
   entry: {
-    vendor: './src/vendor',
     index: './src/main.js'
   },
   output: {
@@ -35,6 +34,11 @@ module.exports = (options = {}) => ({
               'css-loader',
               'sass-loader?indentedSyntax'
             ]
+          },
+          transformToRequire: {
+            img: 'src',
+            image: 'xlink:href',
+            background: 'bg-image'
           }
           // other vue-loader options go here
         }
@@ -65,6 +69,7 @@ module.exports = (options = {}) => ({
         use: [{
           loader: 'url-loader',
           options: {
+            name: '[name].[ext]?[hash]',
             limit: 10000
           }
         }]
@@ -106,3 +111,24 @@ module.exports = (options = {}) => ({
   },
   devtool: options.dev ? '#eval-source-map' : '#source-map'
 })
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports.devtool = '#source-map'
+  // http://vue-loader.vuejs.org/en/workflow/production.html
+  module.exports.plugins = (module.exports.plugins || []).concat([
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"production"'
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
+      compress: {
+        warnings: false
+      }
+    }),
+    new webpack.LoaderOptionsPlugin({
+      minimize: true
+    })
+  ])
+}

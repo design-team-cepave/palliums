@@ -1,8 +1,7 @@
 <template lang="pug">
   #app
     .container
-      background(flat-color="transparent", bg-image="./src/assets/bg.svg").home
-        img.hidden(src="./assets/bg.svg")
+      background(flat-color="transparent", bg-image="./assets/bg.svg").home
         headbar
         .logo
           img(src="./assets/logo.png")
@@ -21,7 +20,7 @@
         h1 Features<br />with<br />Pallet
         .items
           feature-item(v-for="item in features", :key="item.id", :title="item.name", :desc="item.description", :gradient="item.gradient", :icon="item.icon")
-      background(flat-color="transparent", bg-image="./src/assets/bg.svg").section.history
+      background(flat-color="transparent", bg-image="./assets/bg.svg").section.history
         h1 Development History
         .diagram
           .row
@@ -95,7 +94,7 @@
         .content
           .item(v-for="community in communities", :key="community.icon[1]") 
             p-button(shadow="0 1px 3px 0 rgba(32,33,39,0.12)" :width="50" :height="48" :border-radius="10" :icon="community.icon", text-color="#B9BDC3")
-      background(flat-color="transparent", bg-image="./src/assets/bg.svg").section.subscribe
+      background(flat-color="transparent", bg-image="./assets/bg.svg").section.subscribe
         h1 Subscribe for Update
         .toolbar
           input(placeholder="Your E-Mail")
@@ -108,7 +107,7 @@
         .copyright Created with by <b>Cepave</b><br />©Copyright 2017 AppStarter - All Rights Reserved
         .links
           .btn-group
-            p-button(v-for="link in links", :width="40" :height="38" :icon="link.icon", text-color="#B9BDC3")
+            p-button(v-for="link in links", :key="link.id" :width="40" :height="38" :icon="link.icon", text-color="#B9BDC3")
 </template>
 
 <script>
