@@ -99,9 +99,9 @@
         .toolbar
           input(placeholder="Your E-Mail")
           p-button(text="Subscribe", gradient="#FF8E64 0%,#FFE641 100%", text-color="white", shadow="0 6px 12px 0 rgba(40,43,49,0.16)")
-        .comment
-          span By clicking “Subscribe” button you agree to our
-          a(href="javascript:") Terms of Use
+        //- .comment
+        //-   span By clicking “Subscribe” button you agree to our
+        //-   a(href="javascript:") Terms of Use
       background(flat-color="white").footer
         h3 Pallet
         .copyright Created with by <b>Cepave</b><br />©Copyright 2017 AppStarter - All Rights Reserved
@@ -123,7 +123,7 @@
         .toolbar(slot="footer")
           label
             input(type="checkbox")
-            div I have read the Pallet TOKEN SAFT, Pallet terms and conditions, and Pallet white paper.
+            .confirm I have read the Pallet TOKEN SAFT, Pallet terms and conditions, and Pallet white paper.
           p-button(text="CONTINUE", shadow="0 6px 12px 0 rgba(40,43,49,0.16)", border="1px solid #ddd", @click="close")
 </template>
 
@@ -269,7 +269,7 @@ li {
 
   .logo {
     position: relative;
-    width: 20%;
+    width: 10%;
     z-index: 9;
     margin: 25px auto 0;
   }
@@ -278,8 +278,13 @@ li {
     z-index: 9;
   }
   h3, h4, h5 {
-    padding: 10px 15px;
+    padding: 5px 15px 5px;
     color: white;    
+  }
+  h5 {
+    & + h5 {
+      padding-top: 0;
+    }
   }
   .bg {
     z-index: 0 !important;
@@ -299,8 +304,11 @@ li {
   input {
     margin-right: 10px;
   }
+  .confirm {
+    font-size: 13px;
+  }
   .button {
-    margin: 20px auto 10px !important;
+    margin: 10px auto !important;
   }
 }
 
