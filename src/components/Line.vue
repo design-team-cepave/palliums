@@ -30,7 +30,8 @@
         height: this.height.charAt(this.height.length - 1) === '%' ? this.height : this.height + 'px',
         backgroundColor: this.color,
         top: pos[1],
-        left: pos[0]
+        left: pos[0],
+        margin: 'auto'
       }
       return {
         styleObject: styleObject

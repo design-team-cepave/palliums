@@ -5,10 +5,10 @@
       <div class="name">Pallet</div>
     </div>
     <ul class="menu">
-      <li>Features</li>
-      <li>Members</li>
-      <li>FAQ</li>
-      <li class="other"><p-button text="join ICO" /></li>
+      <li><a href="#" v-scroll-to="'#features'">Features</a></li>
+      <li><a href="#" v-scroll-to="'#members'">Members</a></li>
+      <li><a href="#" v-scroll-to="'#faq'">FAQ</a></li>
+      <li class="other"><p-button text="join ICO" @click="click" /></li>
     </ul>
   </div>
 </template>
@@ -17,6 +17,11 @@
   export default {
     data() {
       return {}
+    },
+    methods: {
+      click: function(e) {
+        this.$emit('click', e)
+      }
     }
   }
 </script>
@@ -31,6 +36,12 @@
     padding: 18px 9%;
     z-index: 999;
     margin-bottom: 50px;
+    li {
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
   }
   .logo {
     display: flex;

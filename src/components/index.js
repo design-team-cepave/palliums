@@ -15,6 +15,7 @@ import Line from './Line.vue'
 import Avatar from './Avatar.vue'
 import Accordion from './Accordion.vue'
 import Grid from './Grid.vue'
+import Modal from './Modal.vue'
 
 Vue.component('background', Background)
 Vue.component('headbar', HeadBar)
@@ -25,4 +26,5 @@ Vue.component('p-line', Line)
 Vue.component('avatar', Avatar)
 Vue.component('accordion', Accordion)
 Vue.component('grid', Grid)
+Vue.component('modal', Modal)
 Vue.component(FontAwesomeIcon.name, FontAwesomeIcon)

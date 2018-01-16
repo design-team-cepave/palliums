@@ -1,8 +1,8 @@
 <template>
-  <div class="button" v-bind:style="$data.styles">
+  <button class="button" @click="click" v-bind:style="$data.styles">
     <span v-if="text">{{ text }}</span>
     <font-awesome-icon v-if="!text && icon" :icon="icon" :color="textColor" size="lg" />
-  </div>
+  </button>
 </template>
 
 <script>
@@ -20,6 +20,10 @@
         type: String,
         default: '#282B31',
       },
+      border: {
+        type: String,
+        default: 'none',
+      },
       'border-radius': {
         type: Number,
         default: 5
@@ -35,6 +39,7 @@
       let styleObject = {
         borderRadius: this.borderRadius + 'px',
         boxShadow: this.shadow,
+        border: this.border,
         color: this.textColor,
         cursor: this.clickable ? 'pointer' : 'arrow',
       }
@@ -51,6 +56,11 @@
       }
       return {
         styles: styleObject,
+      }
+    },
+    methods: {
+      click: function(e) {
+        this.$emit('click', e)
       }
     }
   }

@@ -2,21 +2,21 @@
   #app
     .container
       background(flat-color="transparent", bg-image="./assets/bg.svg").home
-        headbar
+        headbar(@click="showModal = true")
         .logo
           img(src="./assets/logo.png")
         h1 {{ msg }}
         h1 Bridge of Blockchains
         .buttons
           p-button(text="Whitepaper", gradient="#FF8E64 0%,#FFE641 100%", text-color="white", shadow="0 6px 12px 0 rgba(40,43,49,0.16)")
-          p-button(text="join ICO", shadow="0 6px 12px 0 rgba(40,43,49,0.16)")
+          p-button(text="join ICO", shadow="0 6px 12px 0 rgba(40,43,49,0.16)", @click="showModal = true")
       //  h1.what What is Pallet?
       //background(flat-color="white", height="245")
       //.laptop
       //  .group
       //    img(src="./assets/laptop.svg")
       //    img.play(src="./assets/play-button.svg")
-      background(flat-color="#F8F9FA").section.features
+      background(flat-color="#F8F9FA", id="features").section.features
         h1 Features<br />with<br />Pallet
         .items
           feature-item(v-for="item in features", :key="item.id", :title="item.name", :desc="item.description", :gradient="item.gradient", :icon="item.icon")
@@ -70,14 +70,14 @@
               li 10%審計與安全監管
               li 10%法務
         .toolbar
-          p-button(text="join ICO", gradient="#FF8E64 0%,#FFE641 100%", text-color="white", :width="230", :height="50", shadow="0 6px 12px 0 rgba(40,43,49,0.16)")
-      background(flat-color="#FFFFFF").section.members
+          p-button(text="join ICO", gradient="#FF8E64 0%,#FFE641 100%", text-color="white", :width="230", :height="50", shadow="0 6px 12px 0 rgba(40,43,49,0.16)", @click="showModal = true")
+      background(flat-color="#FFFFFF", id="members").section.members
         h1 Members
         .group
           avatar(v-for="leader in leaders", :key="leader.id", :title="leader.title", :name="leader.name", :photo="leader.photo", :descript="leader.descript", :with-card="leader.isLeader")
         .group
           avatar(v-for="member in members", :key="member.id", :title="member.title", :name="member.name", :photo="member.photo", :with-card="member.isLeader")
-      background(flat-color="#F8F9FA").section.faq
+      background(flat-color="#F8F9FA", id="faq").section.faq
         h1 Questions and Answers
         accordion(v-for="question in questions", :key="question.id", :title="question.title", :content="question.content")
         .comment
@@ -108,6 +108,23 @@
         .links
           .btn-group
             p-button(v-for="link in links", :key="link.id" :width="40" :height="38" :icon="link.icon", text-color="#B9BDC3")
+      modal(v-if="showModal", @close="close")
+        h3(slot="header") GET PALLI TOKENS
+        background(flat-color="transparent", bg-image="./assets/bg.svg", slot="body")
+          img.logo(src="./assets/logo.png")
+          h4 PLEASE READ THE PALLET TOKEN SAFT. PALLET TERMS AND CONDITIONS, AND PALLET WHITE PAPER, AND THEN CONFIRM CHECKBOX ITEMS TO PROCEED.
+          p-line(width="90%", height="1", color="white")
+          h5
+            a PALLET TOKEN SAFT
+          h5
+            a PALLET TERMS AND CONDITIONS
+          h5
+            a PALLET WHITE PAPER
+        .toolbar(slot="footer")
+          label
+            input(type="checkbox")
+            div I have read the Pallet TOKEN SAFT, Pallet terms and conditions, and Pallet white paper.
+          p-button(text="CONTINUE", shadow="0 6px 12px 0 rgba(40,43,49,0.16)", border="1px solid #ddd", @click="close")
 </template>
 
 <script>
@@ -116,6 +133,7 @@ export default {
   data () {
     return {
       msg: 'Pallet',
+      showModal: false,
       features: [
         { id: 1, name: 'Token-Coin seperation', description: '証是通証，也就是token，幣則是coin。有別於傳統區塊鏈比特幣及以太坊，其屬於簡單簡單粗暴全網算力，像是近期養貓風潮導致了以太坊網絡塞車', gradient: '#7956EC 0%,#2FB9F8 100%', icon: 'adjust' },
         { id: 2, name: 'Multi-chain interaction', description: 'PALLET 是一個水平整合的平台，提供區塊鏈與區塊鏈之間的跨鏈通信開發套件', gradient: '#009FC5 0%,#3CECB0 100%', icon: 'tty' },
@@ -180,8 +198,10 @@ export default {
       ]
     }
   },
-  mounted() {
-    
+  methods: {
+    close: function(e) {
+      this.showModal = false
+    }
   }
 }
 </script>
@@ -240,6 +260,48 @@ li {
   display: inline-block;
   margin: 0 10px;
   cursor: pointer;
+}
+
+.modal-body {
+  .wrapper {
+    text-align: center;
+  }
+
+  .logo {
+    position: relative;
+    width: 20%;
+    z-index: 9;
+    margin: 25px auto 0;
+  }
+  h3, h4, h5, div {
+    position: relative;
+    z-index: 9;
+  }
+  h3, h4, h5 {
+    padding: 10px 15px;
+    color: white;    
+  }
+  .bg {
+    z-index: 0 !important;
+  }
+}
+
+.modal-footer {
+  .footer {
+    flex-direction: column;
+  }
+  label {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 10px;
+  }
+  input {
+    margin-right: 10px;
+  }
+  .button {
+    margin: 20px auto 10px !important;
+  }
 }
 
 .buttons {
