@@ -5,11 +5,11 @@
         headbar(@click="showModal = true")
         .logo
           img(src="./assets/logo.png")
-        h1 {{ msg }}
-        h1 Bridge of Blockchains
+        h1(v-t="'pallet'")
+        h1(v-t="'slogan'")
         .buttons
-          p-button(text="Whitepaper", gradient="#FF8E64 0%,#FFE641 100%", text-color="white", shadow="0 6px 12px 0 rgba(40,43,49,0.16)")
-          p-button(text="join ICO", shadow="0 6px 12px 0 rgba(40,43,49,0.16)", @click="showModal = true")
+          p-button(:text="$t('whitepaper')", gradient="#FF8E64 0%,#FFE641 100%", text-color="white", shadow="0 6px 12px 0 rgba(40,43,49,0.16)")
+          p-button(:text="$t('joinICO')", shadow="0 6px 12px 0 rgba(40,43,49,0.16)", @click="showModal = true")
       //  h1.what What is Pallet?
       //background(flat-color="white", height="245")
       //.laptop
@@ -17,9 +17,9 @@
       //    img(src="./assets/laptop.svg")
       //    img.play(src="./assets/play-button.svg")
       background(flat-color="#F8F9FA", id="features").section.features
-        h1 Features<br />with<br />Pallet
+        h1(v-html="$t('features.header')")
         .items
-          feature-item(v-for="item in features", :key="item.id", :title="item.name", :desc="item.description", :gradient="item.gradient", :icon="item.icon")
+          feature-item(v-for="item in features", :key="item.id", :title="$t(item.name)", :desc="$t(item.description)", :gradient="item.gradient", :icon="item.icon")
       background(flat-color="transparent", bg-image="./assets/bg.svg").section.history
         h1 Development History
         .diagram
@@ -70,7 +70,7 @@
               li 10%審計與安全監管
               li 10%法務
         .toolbar
-          p-button(text="join ICO", gradient="#FF8E64 0%,#FFE641 100%", text-color="white", :width="230", :height="50", shadow="0 6px 12px 0 rgba(40,43,49,0.16)", @click="showModal = true")
+          p-button(:text="$t('joinICO')", gradient="#FF8E64 0%,#FFE641 100%", text-color="white", :width="230", :height="50", shadow="0 6px 12px 0 rgba(40,43,49,0.16)", @click="showModal = true")
       background(flat-color="#FFFFFF", id="members").section.members
         h1 Members
         .group
@@ -135,11 +135,11 @@ export default {
       msg: 'Pallet',
       showModal: false,
       features: [
-        { id: 1, name: 'Token-Coin seperation', description: '証是通証，也就是token，幣則是coin。有別於傳統區塊鏈比特幣及以太坊，其屬於簡單簡單粗暴全網算力，像是近期養貓風潮導致了以太坊網絡塞車', gradient: '#7956EC 0%,#2FB9F8 100%', icon: 'adjust' },
-        { id: 2, name: 'Multi-chain interaction', description: 'PALLET 是一個水平整合的平台，提供區塊鏈與區塊鏈之間的跨鏈通信開發套件', gradient: '#009FC5 0%,#3CECB0 100%', icon: 'tty' },
-        { id: 3, name: 'Security', description: '開發者可選擇熟悉的語言撰寫智能合約；合約內容可限定僅有參與方知曉', gradient: '#FF8E64 0%,#FFE641 100%', icon: 'lock' },
-        { id: 4, name: 'Smart contract', description: 'PALLET 是一個次世代的操作系統，提供更好效能、更多功能、更加安全的智能合約使用體驗', gradient: '#F23673 0%,#FFC066 100%', icon: 'copyright' },
-        { id: 5, name: 'Multi-cryptocurrency exchange', description: 'PALLET 在多鏈串接的基礎上實現多種區塊鏈証幣之間交易', gradient: '#AD2AB9 0%,#FF618C 100%', icon: 'exchange-alt' },
+        { id: 1, name: 'features.tokenCoin', description: 'features.tokenCoinDesc', gradient: '#7956EC 0%,#2FB9F8 100%', icon: 'adjust' },
+        { id: 2, name: 'features.multiChain', description: 'features.multiChainDesc', gradient: '#009FC5 0%,#3CECB0 100%', icon: 'tty' },
+        { id: 3, name: 'features.security', description: 'features.securityDesc', gradient: '#FF8E64 0%,#FFE641 100%', icon: 'lock' },
+        { id: 4, name: 'features.smartContract', description: 'features.smartContractDesc', gradient: '#F23673 0%,#FFC066 100%', icon: 'copyright' },
+        { id: 5, name: 'features.multiCrypto', description: 'features.multiCryptoDesc', gradient: '#AD2AB9 0%,#FF618C 100%', icon: 'exchange-alt' },
         //{ id: 6, name: 'Feature 6', description: 'Description6 description6 description6 description6 description6', gradient: '#5134B2 0%,#B175EB 100%', icon: 'sliders-h' },
       ],
       leaders: [
@@ -260,6 +260,32 @@ li {
   display: inline-block;
   margin: 0 10px;
   cursor: pointer;
+}
+
+// To hide clear button on v-select
+.v-select {
+  &.single {
+    .selected-tag {
+      position: absolute;
+      opacity: 0 !important;
+    }
+    input {
+      cursor: pointer;
+    }
+  }
+
+  .dropdown-toggle {
+    background-color: white;
+    border: none;
+    padding: 1px 0;
+
+    .clear {
+      display: none;
+    }
+  }
+  .dropdown-menu {
+    border: none;
+  }
 }
 
 .modal-body {
