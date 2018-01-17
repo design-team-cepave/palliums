@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  palliums01:
+    container_name: palliums01
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    hostname: palliums01
+    ports:
+      - "80:8080"
+      - "8080:8080"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    restart: always
