@@ -5,11 +5,11 @@
         headbar(@click="showModal = true")
         .logo
           img(src="./assets/logo.png")
-        h1 {{ msg }}
-        h1 Bridge of Blockchains
+        h1(v-t="'pallet'")
+        h1(v-t="'slogan'")
         .buttons
-          p-button(text="Whitepaper", gradient="#FF8E64 0%,#FFE641 100%", text-color="white", shadow="0 6px 12px 0 rgba(40,43,49,0.16)")
-          p-button(text="join ICO", shadow="0 6px 12px 0 rgba(40,43,49,0.16)", @click="showModal = true")
+          p-button(:text="$t('whitepaper')", gradient="#FF8E64 0%,#FFE641 100%", text-color="white", shadow="0 6px 12px 0 rgba(40,43,49,0.16)")
+          p-button(:text="$t('joinICO')", shadow="0 6px 12px 0 rgba(40,43,49,0.16)", @click="showModal = true")
       //  h1.what What is Pallet?
       //background(flat-color="white", height="245")
       //.laptop
@@ -17,11 +17,11 @@
       //    img(src="./assets/laptop.svg")
       //    img.play(src="./assets/play-button.svg")
       background(flat-color="#F8F9FA", id="features").section.features
-        h1 Features<br />with<br />Pallet
+        h1(v-html="$t('features.header')")
         .items
-          feature-item(v-for="item in features", :key="item.id", :title="item.name", :desc="item.description", :gradient="item.gradient", :icon="item.icon")
+          feature-item(v-for="item in features", :key="item.id", :title="$t(item.name)", :desc="$t(item.description)", :gradient="item.gradient", :icon="item.icon")
       background(flat-color="transparent", bg-image="./assets/bg.svg").section.history
-        h1 Development History
+        h1(v-t="'developHistory'")
         .diagram
           .row
             hexagon(gradient="#AD2AB9 0%, #FF618C 100%", :z-index="3", ref="h1") Bitcoin
@@ -51,80 +51,80 @@
             p-line(width="20")
             hexagon(text-color="#647391", :height="56") ART
       background(flat-color="#F8F9FA").section.ico
-        h1 Token Distribution
+        h1(v-t="'tokenDistribution'")
         .row
           .card
             img(src="./assets/token-card-bg.svg")
-            .title Pali 代幣分配
+            .title(v-t="'icoUsage.pali.label'")
             .content
-              li 50%公開售賣
-              li 40%團隊持有
-              li 10%私募
+              li(v-t="'icoUsage.pali.use1'")
+              li(v-t="'icoUsage.pali.use2'")
+              li(v-t="'icoUsage.pali.use3'")
           .card
             img(src="./assets/token-card-bg.svg")
-            .title ICO 資金用途
+            .title(v-t="'icoUsage.cash.label'")
             .content
-              li 40%產品開發
-              li 20%平台運營
-              li 20%市場推廣
-              li 10%審計與安全監管
-              li 10%法務
+              li(v-t="'icoUsage.cash.use1'")
+              li(v-t="'icoUsage.cash.use2'")
+              li(v-t="'icoUsage.cash.use3'")
+              li(v-t="'icoUsage.cash.use4'")
+              li(v-t="'icoUsage.cash.use5'")
         .toolbar
-          p-button(text="join ICO", gradient="#FF8E64 0%,#FFE641 100%", text-color="white", :width="230", :height="50", shadow="0 6px 12px 0 rgba(40,43,49,0.16)", @click="showModal = true")
+          p-button(:text="$t('joinICO')", gradient="#FF8E64 0%,#FFE641 100%", text-color="white", :width="230", :height="50", shadow="0 6px 12px 0 rgba(40,43,49,0.16)", @click="showModal = true")
       background(flat-color="#FFFFFF", id="members").section.members
-        h1 Members
+        h1(v-t="'members.label'")
         .group
-          avatar(v-for="leader in leaders", :key="leader.id", :title="leader.title", :name="leader.name", :photo="leader.photo", :descript="leader.descript", :with-card="leader.isLeader")
+          avatar(v-for="leader in leaders", :key="leader.id", :title="$t(leader.title)", :name="$t(leader.name)", :photo="leader.photo", :descript="$t(leader.descript)", :with-card="leader.isLeader")
         .group
-          avatar(v-for="member in members", :key="member.id", :title="member.title", :name="member.name", :photo="member.photo", :with-card="member.isLeader")
+          avatar(v-for="member in members", :key="member.id", :title="$t(member.title)", :name="$t(member.name)", :photo="member.photo", :with-card="member.isLeader")
       background(flat-color="#F8F9FA", id="faq").section.faq
-        h1 Questions and Answers
-        accordion(v-for="question in questions", :key="question.id", :title="question.title", :content="question.content")
+        h1(v-t="'faq.longLabel'")
+        accordion(v-for="question in questions", :key="question.id", :title="$t(question.title)", :content="$t(question.content)")
         .comment
           span Find
           a(href="javascript:") Here
           span if you still have any questions
       background(flat-color="#F8F9FA").section.media
-        h1 Media
+        h1(v-t="'media.label'")
         grid(:data="medias")
       background(flat-color="#FFF").section.blank
         .brick(v-for="b in bricks", :key="b")
       background(flat-color="#F8F9FA").section.community
-        h1 Community
+        h1(v-t="'community'")
         .content
           .item(v-for="community in communities", :key="community.icon[1]") 
             p-button(shadow="0 1px 3px 0 rgba(32,33,39,0.12)" :width="50" :height="48" :border-radius="10" :icon="community.icon", text-color="#B9BDC3")
       background(flat-color="transparent", bg-image="./assets/bg.svg").section.subscribe
-        h1 Subscribe for Update
+        h1(v-t="'subscribe.label'")
         .toolbar
           input(placeholder="Your E-Mail")
-          p-button(text="Subscribe", gradient="#FF8E64 0%,#FFE641 100%", text-color="white", shadow="0 6px 12px 0 rgba(40,43,49,0.16)")
+          p-button(:text="$t('subscribe.send')", gradient="#FF8E64 0%,#FFE641 100%", text-color="white", shadow="0 6px 12px 0 rgba(40,43,49,0.16)")
         //- .comment
         //-   span By clicking “Subscribe” button you agree to our
         //-   a(href="javascript:") Terms of Use
       background(flat-color="white").footer
-        h3 Pallet
-        .copyright Created with by <b>Cepave</b><br />©Copyright 2017 AppStarter - All Rights Reserved
+        h3(v-t="'pallet'")
+        .copyright(v-html="$t('copyright')")
         .links
           .btn-group
             p-button(v-for="link in links", :key="link.id" :width="40" :height="38" :icon="link.icon", text-color="#B9BDC3")
       modal(v-if="showModal", @close="close")
-        h3(slot="header") GET PALLI TOKENS
+        h3(slot="header", v-t="'icoModal.header'")
         background(flat-color="transparent", bg-image="./assets/bg.svg", slot="body")
           img.logo(src="./assets/logo.png")
-          h4 PLEASE READ THE PALLET TOKEN SAFT. PALLET TERMS AND CONDITIONS, AND PALLET WHITE PAPER, AND THEN CONFIRM CHECKBOX ITEMS TO PROCEED.
-          p-line(width="90%", height="1", color="white")
+          h4(v-t="'icoModal.desc'") 
+          p-line(width="90%", height="1", color="white", margin="auto")
           h5
-            a PALLET TOKEN SAFT
+            a(v-t="'icoModal.links[0].label'")
           h5
-            a PALLET TERMS AND CONDITIONS
+            a(v-t="'icoModal.links[1].label'")
           h5
-            a PALLET WHITE PAPER
+            a(v-t="'icoModal.links[2].label'")
         .toolbar(slot="footer")
           label
             input(type="checkbox")
-            .confirm I have read the Pallet TOKEN SAFT, Pallet terms and conditions, and Pallet white paper.
-          p-button(text="CONTINUE", shadow="0 6px 12px 0 rgba(40,43,49,0.16)", border="1px solid #ddd", @click="close")
+            .confirm(v-t="'icoModal.confirm'")
+          p-button(:text="$t('icoModal.continue')", shadow="0 6px 12px 0 rgba(40,43,49,0.16)", border="1px solid #ddd", @click="close")
 </template>
 
 <script>
@@ -135,42 +135,42 @@ export default {
       msg: 'Pallet',
       showModal: false,
       features: [
-        { id: 1, name: 'Token-Coin seperation', description: '証是通証，也就是token，幣則是coin。有別於傳統區塊鏈比特幣及以太坊，其屬於簡單簡單粗暴全網算力，像是近期養貓風潮導致了以太坊網絡塞車', gradient: '#7956EC 0%,#2FB9F8 100%', icon: 'adjust' },
-        { id: 2, name: 'Multi-chain interaction', description: 'PALLET 是一個水平整合的平台，提供區塊鏈與區塊鏈之間的跨鏈通信開發套件', gradient: '#009FC5 0%,#3CECB0 100%', icon: 'tty' },
-        { id: 3, name: 'Security', description: '開發者可選擇熟悉的語言撰寫智能合約；合約內容可限定僅有參與方知曉', gradient: '#FF8E64 0%,#FFE641 100%', icon: 'lock' },
-        { id: 4, name: 'Smart contract', description: 'PALLET 是一個次世代的操作系統，提供更好效能、更多功能、更加安全的智能合約使用體驗', gradient: '#F23673 0%,#FFC066 100%', icon: 'copyright' },
-        { id: 5, name: 'Multi-cryptocurrency exchange', description: 'PALLET 在多鏈串接的基礎上實現多種區塊鏈証幣之間交易', gradient: '#AD2AB9 0%,#FF618C 100%', icon: 'exchange-alt' },
+        { id: 1, name: 'features.tokenCoin', description: 'features.tokenCoinDesc', gradient: '#7956EC 0%,#2FB9F8 100%', icon: 'adjust' },
+        { id: 2, name: 'features.multiChain', description: 'features.multiChainDesc', gradient: '#009FC5 0%,#3CECB0 100%', icon: 'tty' },
+        { id: 3, name: 'features.security', description: 'features.securityDesc', gradient: '#FF8E64 0%,#FFE641 100%', icon: 'lock' },
+        { id: 4, name: 'features.smartContract', description: 'features.smartContractDesc', gradient: '#F23673 0%,#FFC066 100%', icon: 'copyright' },
+        { id: 5, name: 'features.multiCrypto', description: 'features.multiCryptoDesc', gradient: '#AD2AB9 0%,#FF618C 100%', icon: 'exchange-alt' },
         //{ id: 6, name: 'Feature 6', description: 'Description6 description6 description6 description6 description6', gradient: '#5134B2 0%,#B175EB 100%', icon: 'sliders-h' },
       ],
       leaders: [
-        { id: 1, title: 'CEO', name: 'Josh Sheng Chen', photo: './src/assets/members/CEO.png', isLeader: true, descript: 'Mr. Josh Sheng Chen is the Co-founder and Executive Chairman of 21Vianet Group, Inc.(VNET). In 2016, Mr. Chen established WiFire Group providing an innovative and proprietary network solution using the blockchain protocol to provide a unique digital ID system to ultra-connected smart cities. Combining data centers with block chain will usher in a new generation of strategically relevant and innovation-driven data centers.' },
-        { id: 2, title: 'CTO', name: 'Steve Shih-Wei Liao', photo: './src/assets/members/CTO.png', isLeader: true, descript: "22 years in Silicon Valley, Stanford, Google and Intel. Participated in Intel's super-thread technology research and development and parallel computing and compiler optimization development. Once used machine learning technology to help Google improve data center utilization, but also the original author of Android Compiler, Virtual Machine, RenderScript Engine, but also because of the contribution to Android and Google's highest founder of the award. Return to Stanford Research Blockchain and FinTech in 2013, Blockchain and FinTech at Taiwan University in 2015 to nurture Taiwanese blockchain talent." },
-        { id: 3, title: 'Lead Engineer', name: 'Mark Su', photo: './src/assets/members/TechLead.png', isLeader: true, descript: 'Brief:consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacu' },
+        { id: 1, title: 'members.ceo.title', name: 'members.ceo.name', photo: './src/assets/members/CEO.png', isLeader: true, descript: 'members.ceo.desc' },
+        { id: 2, title: 'members.cto.title', name: 'members.cto.name', photo: './src/assets/members/CTO.png', isLeader: true, descript: "members.cto.desc" },
+        { id: 3, title: 'members.lead.title', name: 'members.lead.name', photo: './src/assets/members/TechLead.png', isLeader: true, descript: 'members.lead.desc' },
       ],
       members: [
-        { id: 1, title: 'Developer', name: 'Anderson Chen', photo: './src/assets/anonymous.jpg' },
-        { id: 2, title: 'Developer', name: 'Hank Yang', photo: './src/assets/anonymous.jpg' },
-        { id: 3, title: 'Developer', name: 'Jack Lee', photo: './src/assets/anonymous.jpg' },
-        { id: 4, title: 'Developer', name: 'James Hsiao', photo: './src/assets/anonymous.jpg' },
-        { id: 5, title: 'Developer', name: 'Jiyi Wu', photo: './src/assets/anonymous.jpg' },
-        { id: 6, title: 'Developer', name: 'Josh Chu', photo: './src/assets/anonymous.jpg' },
-        { id: 7, title: 'Developer', name: 'Masato Wang', photo: './src/assets/anonymous.jpg' },
-        { id: 8, title: 'Developer', name: 'Steven Yang', photo: './src/assets/anonymous.jpg' },
-        { id: 9, title: 'Developer', name: 'Totoro Chen', photo: './src/assets/members/PM.jpg' },
-        { id: 10, title: 'DevOps', name: 'BM Wu', photo: './src/assets/anonymous.jpg' },
+        { id: 1, title: 'members.developer', name: 'members.developers[0]', photo: './src/assets/anonymous.jpg' },
+        { id: 2, title: 'members.developer', name: 'members.developers[1]', photo: './src/assets/anonymous.jpg' },
+        { id: 3, title: 'members.developer', name: 'members.developers[2]', photo: './src/assets/anonymous.jpg' },
+        { id: 4, title: 'members.developer', name: 'members.developers[3]', photo: './src/assets/anonymous.jpg' },
+        { id: 5, title: 'members.developer', name: 'members.developers[4]', photo: './src/assets/anonymous.jpg' },
+        { id: 6, title: 'members.developer', name: 'members.developers[5]', photo: './src/assets/anonymous.jpg' },
+        { id: 7, title: 'members.developer', name: 'members.developers[6]', photo: './src/assets/anonymous.jpg' },
+        { id: 8, title: 'members.developer', name: 'members.developers[7]', photo: './src/assets/anonymous.jpg' },
+        { id: 9, title: 'members.developer', name: 'members.developers[8]', photo: './src/assets/members/PM.jpg' },
+        { id: 10, title: 'members.devOps', name: 'members.developers[9]', photo: './src/assets/anonymous.jpg' },
       ],
       questions: [
-        { id: 1, title: 'What is Pallet?', content: 'The core action of the Pallet Technology consist of the following three parts. First, build up such basic token, like Palli, for general usage. Second, strategically enable infrastructure-level services that can be used in many applications. The analogy of the first step and the second step is like Android and GMS (Google Mobile Services), Third, finally empower governance bodies and people communities to create their own Pallium social contracts on the platforms and blockchains they so choose. All the world computers above can be interacted through the open-source Pallium technology. Thus, today’s global internet can generally grow into a world of internet and interchain.' },
-        { id: 2, title: 'Who is building Pallet?', content: 'Cepave, DiQi, Gcoin, VNET.' },
-        { id: 3, title: 'Is Pallet open source?', content: 'https://github.com/palliums' },
-        { id: 4, title: 'What features do Pallet have?', content: 'Pallium’s first step shall bring you a decentralized/distributed contract execution environment that supports secure and private contract execution on multiple blockchains to achieve on-chain, inter-chain, and even off-chain consideration exchange, and an inclusive environment that supports multiple programming languages and multiple execution platforms to allow the contracts to be triggered anytime and anywhere.' },
-        { id: 5, title: 'How does the Pallet Token distribution work?', content: 'Initial Palli will be produced in the ICO. We also can get corresponding Palli in return by investing Bitcoin or Ether in the Palli contract.It’s only allowed to acquire Palli by joining the ICO, being a notary to collect transaction fee and buying it.(+增發)Palli is valuable, because Palli can be used to “buy” the computing power of Notary for transaction verification. Palli Glu is priced by the price of computation power (e.g., PC or cloud service). Competition among Notaries may result in discount and make Palli more valuable. In addition, Palli can be used as the medium of value transferring like Settlement currency.' },
-        { id: 6, title: 'How can I participate in the Pallet Token distribution?', content: 'Please follow our official website for ICO information.' },
-        { id: 7, title: 'What is token sale time schedule?', content: '2018/1/20~2/19' },
-        { id: 8, title: 'What BTC compatible wallets are recommended?', content: 'https://bitcoin.org/en/choose-your-wallet' },
-        { id: 9, title: 'What are advantages of Pallet?', content: 'TBD' },
-        { id: 10, title: 'Are Palli transferable? Where are Palli traded?', content: 'TBD' },
-        { id: 11, title: 'What is roadmap?', content: 'TBD' },
+        { id: 1, title: 'faq.questions[0].q', content: 'faq.questions[0].ans' },
+        { id: 2, title: 'faq.questions[1].q', content: 'faq.questions[1].ans' },
+        { id: 3, title: 'faq.questions[2].q', content: 'faq.questions[2].ans' },
+        { id: 4, title: 'faq.questions[3].q', content: 'faq.questions[3].ans' },
+        { id: 5, title: 'faq.questions[4].q', content: 'faq.questions[4].ans' },
+        { id: 6, title: 'faq.questions[5].q', content: 'faq.questions[5].ans' },
+        { id: 7, title: 'faq.questions[6].q', content: 'faq.questions[6].ans' },
+        { id: 8, title: 'faq.questions[7].q', content: 'faq.questions[7].ans' },
+        { id: 9, title: 'faq.questions[8].q', content: 'faq.questions[8].ans' },
+        { id: 10, title: 'faq.questions[9].q', content: 'faq.questions[9].ans' },
+        { id: 11, title: 'faq.questions[10].q', content: 'faq.questions[10].ans' },
       ],
       medias: [
         { id: 1, type: 'img', title: 'Title', content: './src/assets/bg-blue.svg' },
@@ -260,6 +260,45 @@ li {
   display: inline-block;
   margin: 0 10px;
   cursor: pointer;
+}
+
+// To hide clear button on v-select
+.v-select {
+  &.single {
+    .selected-tag {
+      position: absolute;
+      opacity: 0 !important;
+    }
+    input {
+      cursor: pointer;
+    }
+  }
+
+  .dropdown-toggle {
+    background-color: white;
+    border: none;
+    padding: 1px 0;
+
+    .clear {
+      display: none;
+    }
+  }
+  .dropdown-menu {
+    border: none;
+
+    li {
+      &.active {
+        a {
+          background: transparent;
+        }
+      }
+      &.highlight {
+        a {
+          background-color: #2FB9F8;
+        }
+      }
+    }
+  }
 }
 
 .modal-body {
@@ -463,7 +502,7 @@ li {
       text-align: center;
     }
     & + .group {
-      text-align: left;
+      text-align: center;
     }
   }
 }
@@ -593,4 +632,42 @@ li {
 :-ms-input-placeholder {
   color: #B9BDC3;
 }
+
+/* media queries */
+@media screen and (max-width: 1000px) {
+  .history {
+    padding: 120px 5%;
+    .diagram {
+      transform: scale(0.9)
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .history {
+    padding: 120px 2%;
+    .diagram {
+      margin: auto -5%;
+      transform: scale(0.8)
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .history {
+    padding: 120px 0;
+    .diagram {
+      margin: auto -8%;
+      transform: scale(0.6)
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .history {
+    padding: 120px 0;
+    .diagram {
+      margin: auto -10%;
+      transform: scale(0.5)
+    }
+  }
+}
+
 </style>

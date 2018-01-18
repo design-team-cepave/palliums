@@ -33,7 +33,8 @@ module.exports = (options = {}) => ({
               'vue-style-loader',
               'css-loader',
               'sass-loader?indentedSyntax'
-            ]
+            ],
+            i18n: '@kazupon/vue-i18n-loader'
           },
           transformToRequire: {
             img: 'src',

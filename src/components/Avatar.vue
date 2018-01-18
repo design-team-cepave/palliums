@@ -27,7 +27,8 @@
 
 <style lang="scss" scoped>
   .avatar {
-    margin: 0 2%;
+    margin: 5px 2%;
+    min-width: 160px;
     img {
       width: 96px;
       height: 96px;
