@@ -30,6 +30,7 @@
 
 <style lang="scss" scoped>
   .accordion {
+    position: relative;
     background: #FFFFFF;
     box-shadow: 0 1px 3px 0 rgba(32,33,39,0.12);
     border-radius: 12px;

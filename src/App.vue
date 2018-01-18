@@ -502,7 +502,7 @@ li {
       text-align: center;
     }
     & + .group {
-      text-align: left;
+      text-align: center;
     }
   }
 }
