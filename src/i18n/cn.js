@@ -4,6 +4,25 @@ const cn = {
   whitepaper: '白皮书',
   joinICO: '参与 ICO',
   developHistory: '开发历史',
+  icoNews: {
+    label: 'ICO News',
+    news: [
+      { date: '2015/5/1', content: '开始开发第一代区块链: Gcoin' },
+      { date: '2015/7/15', content: '开发Gcoin移动版钱包' },
+      { date: '2015/10/27', content: '开始开发基于第一代产品的第二代区块链产品: Vchain' },
+      { date: '2015/12/21', content: '开发Gcoin 仪表板' },
+      { date: '2016/4/21', content: '撰写Gcoin白皮书' },
+      { date: '2016/8/30', content: '解耦Gcoin RPC API并独立API服务模组: OSS' },
+      { date: '2016/11/16', content:'以OSS为基础开发提供RPC呼叫的RESTful API服务: Pallet API服务' },
+      { date: '2017/2/17', content: '开发Vchain 仪表板' },
+      { date: '2017/5/19', content: '以Ethereum EVM为基础开发Gcoin EVM服务' },
+      { date: '2017/6/4', content: '撰写Vchain白皮书' },
+      { date: '2017/6/19', content: '自Vchain中解耦Oracle服务模组以达成扩充需求' },
+      { date: '2017/9/19', content: '釋出Vchain v1.2' },
+      { date: '2017/10/31', content: '撰写Pallet白皮书' },
+      { date: '2017/11/30', content: 'CSDN访问Pallet团队领导陈升先生，谈论有关通证经济' },
+    ]
+  },
   tokenDistribution: '通证发行',
   icoUsage: {
     pali: {

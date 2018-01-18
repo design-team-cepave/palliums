@@ -50,6 +50,9 @@
             hexagon(text-color="#647391", :height="56") EVM
             p-line(width="20")
             hexagon(text-color="#647391", :height="56") ART
+      background(flat-color="#F8F9FA").section.faq
+        h1(v-t="'icoNews.label'")
+        accordion(v-for="news in newsList", :key="news.id", :title="$t(news.date)", :content="$t(news.content)")
       background(flat-color="#F8F9FA").section.ico
         h1(v-t="'tokenDistribution'")
         .row
@@ -141,6 +144,22 @@ export default {
         { id: 4, name: 'features.smartContract', description: 'features.smartContractDesc', gradient: '#F23673 0%,#FFC066 100%', icon: 'copyright' },
         { id: 5, name: 'features.multiCrypto', description: 'features.multiCryptoDesc', gradient: '#AD2AB9 0%,#FF618C 100%', icon: 'exchange-alt' },
         //{ id: 6, name: 'Feature 6', description: 'Description6 description6 description6 description6 description6', gradient: '#5134B2 0%,#B175EB 100%', icon: 'sliders-h' },
+      ],
+      newsList: [
+        { id: 1, date: 'icoNews.news[0].date', content: 'icoNews.news[0].content' },
+        { id: 2, date: 'icoNews.news[1].date', content: 'icoNews.news[1].content' },
+        { id: 3, date: 'icoNews.news[2].date', content: 'icoNews.news[2].content' },
+        { id: 4, date: 'icoNews.news[3].date', content: 'icoNews.news[3].content' },
+        { id: 5, date: 'icoNews.news[4].date', content: 'icoNews.news[4].content' },
+        { id: 6, date: 'icoNews.news[5].date', content: 'icoNews.news[5].content' },
+        { id: 7, date: 'icoNews.news[6].date', content: 'icoNews.news[6].content' },
+        { id: 8, date: 'icoNews.news[7].date', content: 'icoNews.news[7].content' },
+        { id: 9, date: 'icoNews.news[8].date', content: 'icoNews.news[8].content' },
+        { id: 10, date: 'icoNews.news[9].date', content: 'icoNews.news[9].content' },
+        { id: 11, date: 'icoNews.news[10].date', content: 'icoNews.news[10].content' },
+        { id: 12, date: 'icoNews.news[11].date', content: 'icoNews.news[11].content' },
+        { id: 13, date: 'icoNews.news[12].date', content: 'icoNews.news[12].content' },
+        { id: 14, date: 'icoNews.news[13].date', content: 'icoNews.news[13].content' },
       ],
       leaders: [
         { id: 1, title: 'members.ceo.title', name: 'members.ceo.name', photo: './src/assets/members/CEO.png', isLeader: true, descript: 'members.ceo.desc' },

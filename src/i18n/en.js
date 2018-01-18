@@ -4,6 +4,25 @@ const en = {
   whitepaper: 'White Paper',
   joinICO: 'Join ICO',
   developHistory: 'Development History',
+  icoNews: {
+    label: 'ICO News',
+    news: [
+      { date: '2015/5/1', content: 'Starting develop Gcoin' },
+      { date: '2015/7/15', content: 'Develop Gcoin wallet mobile app' },
+      { date: '2015/10/27', content: 'Starting develop Vchain based on Gcoin' },
+      { date: '2015/12/21', content: 'Develop Gcoin explorer' },
+      { date: '2016/4/21', content: 'Writing Gcoin whitepaper' },
+      { date: '2016/8/30', content: 'Decouple Gcoin RPC API to RESTful API module: OSS' },
+      { date: '2016/11/16', content:'Develop RESTful API for RPC call: Pallet API service' },
+      { date: '2017/2/17', content: 'Develop Vchain explorer' },
+      { date: '2017/5/19', content: 'Modify Gcoin EVM from Ethereum EVM' },
+      { date: '2017/6/4', content: 'Writing Vchain whitepaper' },
+      { date: '2017/6/19', content: 'Decouple oracle module from Vchain' },
+      { date: '2017/9/19', content: 'Release Vchain v1.2' },
+      { date: '2017/10/31', content: 'Writing Pallet whitepaper' },
+      { date: '2017/11/30', content: 'CSDN interviewed with Pallet team leader Josh Chen about token economy' },
+    ]
+  },
   tokenDistribution: 'Token Distribution',
   icoUsage: {
     pali: {
