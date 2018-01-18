@@ -13,6 +13,10 @@
         type: String,
         default: '1'
       },
+      margin: {
+        type: String,
+        default: 'auto 0'
+      },
       color: {
         type: String,
         default: 'white'
@@ -31,7 +35,7 @@
         backgroundColor: this.color,
         top: pos[1],
         left: pos[0],
-        margin: 'auto 0'
+        margin: this.margin
       }
       return {
         styleObject: styleObject

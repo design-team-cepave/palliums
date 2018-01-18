@@ -113,7 +113,7 @@
         background(flat-color="transparent", bg-image="./assets/bg.svg", slot="body")
           img.logo(src="./assets/logo.png")
           h4(v-t="'icoModal.desc'") 
-          p-line(width="90%", height="1", color="white")
+          p-line(width="90%", height="1", color="white", margin="auto")
           h5
             a(v-t="'icoModal.links[0].label'")
           h5
