@@ -6,7 +6,7 @@
     </div>
     <ul class="menu">
       <li><a href="#" v-scroll-to="'#features'" v-t="'features.label'"></a></li>
-      <li><a href="#" v-scroll-to="'#members'" v-t="'members'"></a></li>
+      <li><a href="#" v-scroll-to="'#members'" v-t="'members.label'"></a></li>
       <li><a href="#" v-scroll-to="'#faq'" v-t="'faq.label'"></a></li>
       <li class="other"><p-button :text="$t('joinICO')" @click="click" /></li>
       <li>
@@ -16,6 +16,9 @@
         </div>
         <v-select v-model="locale" :options="langOptions" label="title">
           <template slot="option" slot-scope="option">
+            <span class="selected">
+              <span class="circle" v-if="locale.country == option.country"></span>
+            </span>
             <span class="flag-icon" v-bind:class="option.country"></span>
             {{ option.title }}
           </template>
@@ -58,8 +61,21 @@
     padding: .4em .5em;
     z-index: 9;
     color: #333;
-    font-weight: 600;
     pointer-events: none;
+  }
+  .selected {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 10px 0 -10px;
+  }
+  .circle {
+    display: inline-block;
+    background-image: linear-gradient(90deg, #7956EC 0%,#2FB9F8 100%);
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    text-align: left;
   }
   .header {
     position: relative;

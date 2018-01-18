@@ -31,7 +31,7 @@
         backgroundColor: this.color,
         top: pos[1],
         left: pos[0],
-        margin: 'auto'
+        margin: 'auto 0'
       }
       return {
         styleObject: styleObject
