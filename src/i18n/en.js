@@ -1,5 +1,5 @@
 const en = {
-  pallet: "Pallet",
+  pallet: "PALLET",
   slogan: 'Bridge of Blockchains',
   whitepaper: 'White Paper',
   joinICO: 'Join ICO',
@@ -7,18 +7,18 @@ const en = {
   tokenDistribution: 'Token Distribution',
   icoUsage: {
     pali: {
-      label: 'Pali 代幣分配',
-      use1: '50%公開售賣',
-      use2: '40%團隊持有',
-      use3: '10%私募'
+      label: 'PAL Token distribution',
+      use1: '50% Public sale',
+      use2: '40% Hold by PALLET team',
+      use3: '10% Pre-sale'
     },
     cash: {
-      label: 'ICO 資金用途',
-      use1: '40%產品開發',
-      use2: '20%平台運營',
-      use3: '20%市場推廣',
-      use4: '10%審計與安全監管',
-      use5: '10%法務'
+      label: 'ICO fund usage',
+      use1: '40% for product development',
+      use2: '20% for platform operations',
+      use3: '20% for marketing',
+      use4: '10% for audit',
+      use5: '10% for legal'
     }
   },
   members: {
@@ -49,22 +49,22 @@ const en = {
     label: 'FAQ',
     longLabel: 'Questions and Answers',
     questions: [{
-      q: 'What is Pallet?',
-      ans: 'The core action of the Pallet Technology consist of the following three parts. First, build up such basic token, like Palli, for general usage. Second, strategically enable infrastructure-level services that can be used in many applications. The analogy of the first step and the second step is like Android and GMS (Google Mobile Services), Third, finally empower governance bodies and people communities to create their own Pallium social contracts on the platforms and blockchains they so choose. All the world computers above can be interacted through the open-source Pallium technology. Thus, today’s global internet can generally grow into a world of internet and interchain.'
+      q: 'What is PALLET?',
+      ans: 'The core action of the PALLET Technology consist of the following three parts. First, build up such basic token, like PAL, for general usage. Second, strategically enable infrastructure-level services that can be used in many applications. The analogy of the first step and the second step is like Android and GMS (Google Mobile Services), Third, finally empower governance bodies and people communities to create their own PALLET social contracts on the platforms and blockchains they so choose. All the world computers above can be interacted through the open-source PALLET technology. Thus, today’s global internet can generally grow into a world of internet and interchain.'
     }, {
-      q: 'Who is building Pallet?',
+      q: 'Who is building PALLET?',
       ans: 'Cepave, DiQi, Gcoin, VNET.'
     }, {
-      q: 'Is Pallet open source?',
+      q: 'Is PALLET open source?',
       ans: 'https://github.com/palliums'
     }, {
-      q: 'What features do Pallet have?',
-      ans: 'Pallium’s first step shall bring you a decentralized/distributed contract execution environment that supports secure and private contract execution on multiple blockchains to achieve on-chain, inter-chain, and even off-chain consideration exchange, and an inclusive environment that supports multiple programming languages and multiple execution platforms to allow the contracts to be triggered anytime and anywhere.'
+      q: 'What features do PALLET have?',
+      ans: 'PALLET’s first step shall bring you a decentralized/distributed contract execution environment that supports secure and private contract execution on multiple blockchains to achieve on-chain, inter-chain, and even off-chain consideration exchange, and an inclusive environment that supports multiple programming languages and multiple execution platforms to allow the contracts to be triggered anytime and anywhere.'
     }, {
-      q: 'How does the Pallet Token distribution work?',
-      ans: 'Initial Palli will be produced in the ICO. We also can get corresponding Palli in return by investing Bitcoin or Ether in the Palli contract.It’s only allowed to acquire Palli by joining the ICO, being a notary to collect transaction fee and buying it.(+增發)Palli is valuable, because Palli can be used to “buy” the computing power of Notary for transaction verification. Palli Glu is priced by the price of computation power (e.g., PC or cloud service). Competition among Notaries may result in discount and make Palli more valuable. In addition, Palli can be used as the medium of value transferring like Settlement currency.'
+      q: 'How does the PALLET Token distribution work?',
+      ans: 'Initial PAL will be produced in the ICO. We also can get corresponding PAL in return by investing Bitcoin or Ether in the PAL contract.It’s only allowed to acquire PAL by joining the ICO, being a notary to collect transaction fee and buying it.(+增發)PAL is valuable, because PAL can be used to “buy” the computing power of Notary for transaction verification. PAL Glu is priced by the price of computation power (e.g., PC or cloud service). Competition among Notaries may result in discount and make PAL more valuable. In addition, PAL can be used as the medium of value transferring like Settlement currency.'
     }, {
-      q: 'How can I participate in the Pallet Token distribution?',
+      q: 'How can I participate in the PALLET Token distribution?',
       ans: 'Please follow our official website for ICO information.'
     }, {
       q: 'What is token sale time schedule?',
@@ -73,10 +73,10 @@ const en = {
       q: 'What BTC compatible wallets are recommended?',
       ans: 'https://bitcoin.org/en/choose-your-wallet'
     }, {
-      q: 'What are advantages of Pallet?',
+      q: 'What are advantages of PALLET?',
       ans: 'TBD'
     }, {
-      q: 'Are Palli transferable? Where are Palli traded?',
+      q: 'Are PAL transferable? Where are PAL traded?',
       ans: 'TBD'
     }, {
       q: 'What is roadmap?',
@@ -85,17 +85,17 @@ const en = {
   },
   features: {
     label: 'Features',
-    header: 'Features<br />with<br />Pallet',
+    header: 'Features<br />with<br />PALLET',
     tokenCoin: 'Token-Coin seperation',
-    tokenCoinDesc: '証是通証，也就是token，幣則是coin。有別於傳統區塊鏈比特幣及以太坊，其屬於簡單簡單粗暴全網算力，像是近期養貓風潮導致了以太坊網絡塞車',
+    tokenCoinDesc: 'Different from ordinary blockchains like Bitcoin and Ethereum, we separated token from coin. Trying to solve cogesion problem in nowaday blockchains, and building a ubiquitous eco-system of token.',
     multiChain: 'Multi-chain interaction',
-    multiChainDesc: 'PALLET 是一個水平整合的平台，提供區塊鏈與區塊鏈之間的跨鏈通信開發套件',
+    multiChainDesc: 'PALLET is a horizontally integration platform, providing features of interaction between blockchains.',
     security: 'Security',
-    securityDesc: '開發者可選擇熟悉的語言撰寫智能合約；合約內容可限定僅有參與方知曉',
+    securityDesc: 'Developers can choose familiar programming languages to develop smart contract, they will not be restricted by performance or constrains of some contract languages.',
     smartContract: 'Smart contract',
-    smartContractDesc: 'PALLET 是一個次世代的操作系統，提供更好效能、更多功能、更加安全的智能合約使用體驗',
+    smartContractDesc: 'PALLET is operation system of next generation. Provides experience of smart contract that have more features, more performance, and more secure.',
     multiCrypto: 'Multi-cryptocurrency exchange',
-    multiCryptoDesc: 'PALLET 在多鏈串接的基礎上實現多種區塊鏈証幣之間交易',
+    multiCryptoDesc: 'PALLET implement token exchange on multi-blockchains.',
   },
   media: {
     label: 'Media',
@@ -107,14 +107,14 @@ const en = {
   },
   copyright: 'Created with by <b>Cepave</b><br />©Copyright 2017 AppStarter - All Rights Reserved',
   icoModal: {
-    header: 'GET PALLI TOKENS',
+    header: 'GET PAL TOKENS',
     desc: 'PLEASE READ THE PALLET TOKEN SAFT. PALLET TERMS AND CONDITIONS, AND PALLET WHITE PAPER, AND THEN CONFIRM CHECKBOX ITEMS TO PROCEED.',
     links: [
-      { label: 'PALLET TOKEN SAFT', url: '' },
+      { label: 'PAL TOKEN SAFT', url: '' },
       { label: 'PALLET TERMS AND CONDITIONS', url: '' },
       { label: 'PALLET WHITE PAPER', url: '' },
     ],
-    confirm: 'I have read the Pallet TOKEN SAFT, Pallet terms and conditions, and Pallet white paper.',
+    confirm: 'I have read the PALLET TOKEN SAFT, PALLET terms and conditions, and PALLET white paper.',
     continue: 'CONTINUE',
   }
 }
