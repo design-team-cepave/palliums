@@ -10,7 +10,7 @@
         .buttons
           p-button(:text="$t('whitepaper')", gradient="#FF8E64 0%,#FFE641 100%", text-color="white", shadow="0 6px 12px 0 rgba(40,43,49,0.16)")
           p-button(:text="$t('joinICO')", shadow="0 6px 12px 0 rgba(40,43,49,0.16)", @click="showModal = true")
-      //  h1.what What is Pallet?
+      //  h1.what What is PALLET?
       //background(flat-color="white", height="245")
       //.laptop
       //  .group
@@ -26,20 +26,20 @@
           .row
             hexagon(gradient="#AD2AB9 0%, #FF618C 100%", :z-index="3", ref="h1") Bitcoin
             hexagon.sticky(gradient="#F23673 0%, #FFC066 100%", :width="370" :z-index="2") Ethereum
-            hexagon.sticky(gradient="#FF8E64 0%, #FFE641 100%", :width="370", ref="h2") Pallet
+            hexagon.sticky(gradient="#FF8E64 0%, #FFE641 100%", :width="370", ref="h2") PALLET
           .row
             hexagon(text-color="#647391", :height="56") Gcoin
             p-line(width="20")
             hexagon(text-color="#647391", :height="56") Vchain
             p-line(width="20")
-            hexagon(text-color="#647391", :height="56") Pallet
+            hexagon(text-color="#647391", :height="56") PALLET
             p-line.vertical(width="1", height="120", pos="calc(50% - 300px), 56", ref="v1")
             p-line.vertical(width="1", height="270", pos="50%, 56")
             p-line.vertical(width="1", height="270", pos="calc(50% + 300px), 56", ref="v2")
           .row
             hexagon(text-color="#647391", :width="880", :height="56") Governance
           .row
-            hexagon(text-color="#647391", :width="580", :height="56") Colocoin
+            hexagon(text-color="#647391", :width="580", :height="56") Color Coin
             p-line(width="20")
             hexagon(text-color="#647391", :height="56") ERC20 Token
           .row.align-end
@@ -96,7 +96,7 @@
         h1(v-t="'community'")
         .content
           .item(v-for="community in communities", :key="community.icon[1]") 
-            p-button(shadow="0 1px 3px 0 rgba(32,33,39,0.12)" :width="50" :height="48" :border-radius="10" :icon="community.icon", text-color="#B9BDC3")
+            p-button(shadow="0 1px 3px 0 rgba(32,33,39,0.12)" :width="50" :height="48" :border-radius="10" :icon="community.icon", text-color="#B9BDC3", @click="openLink(community.url)")
       background(flat-color="transparent", bg-image="./assets/bg.svg").section.subscribe
         h1(v-t="'subscribe.label'")
         .toolbar
@@ -110,7 +110,7 @@
         .copyright(v-html="$t('copyright')")
         .links
           .btn-group
-            p-button(v-for="link in links", :key="link.id" :width="40" :height="38" :icon="link.icon", text-color="#B9BDC3")
+            p-button(v-for="link in links", :key="link.id" :width="40" :height="38" :icon="link.icon", text-color="#B9BDC3", @click="openLink(link.url)")
       modal(v-if="showModal", @close="close")
         h3(slot="header", v-t="'icoModal.header'")
         background(flat-color="transparent", bg-image="./assets/bg.svg", slot="body")
@@ -135,7 +135,7 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'Pallet',
+      msg: 'PALLET',
       showModal: false,
       features: [
         { id: 1, name: 'features.tokenCoin', description: 'features.tokenCoinDesc', gradient: '#7956EC 0%,#2FB9F8 100%', icon: 'adjust' },
@@ -193,33 +193,36 @@ export default {
       ],
       medias: [
         { id: 1, type: 'img', title: 'Title', content: './src/assets/bg-blue.svg' },
-        { id: 2, title: 'Title', content: 'Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is' },
+        { id: 2, title: 'Title', content: 'PALLET is bridge of blockchains.PALLET is bridge of blockchains.PALLET is bridge of blockchains.PALLET is bridge of blockchains.PALLET is bridge of blockchains.PALLET is' },
         { id: 3, type: 'img', title: 'Title', content: './src/assets/bg-orange.svg' },
-        { id: 4, title: 'Title', content: 'Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is' },
-        { id: 5, title: 'Title', content: 'Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is' },
+        { id: 4, title: 'Title', content: 'PALLET is bridge of blockchains.PALLET is bridge of blockchains.PALLET is bridge of blockchains.PALLET is bridge of blockchains.PALLET is bridge of blockchains.PALLET is' },
+        { id: 5, title: 'Title', content: 'PALLET is bridge of blockchains.PALLET is bridge of blockchains.PALLET is bridge of blockchains.PALLET is bridge of blockchains.PALLET is bridge of blockchains.PALLET is' },
         { id: 6, type: 'img', title: 'Title', content: './src/assets/bg-green.svg' },
-        { id: 7, title: 'Title', content: 'Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is bridge of blockchains.Pallet is' },
+        { id: 7, title: 'Title', content: 'PALLET is bridge of blockchains.PALLET is bridge of blockchains.PALLET is bridge of blockchains.PALLET is bridge of blockchains.PALLET is bridge of blockchains.PALLET is' },
         { id: 8, type: 'img', title: 'Title', content: './src/assets/bg-magenta.svg' },
       ],
       bricks: [1, 2, 3, 4, 5, 6],
       communities: [
-        { icon: ['fab', 'facebook-f'], url: '' },
-        { icon: ['fab', 'twitter'], url: '' },
-        { icon: ['fab', 'google-plus-g'], url: '' },
-        { icon: ['fab', 'youtube'], url: '' },
-        { icon: ['fab', 'medium-m'], url: '' },
-        { icon: ['fab', 'github'], url: '' },
+        { icon: ['fab', 'facebook-f'], url: 'http://www.facebook.com/Palliums/' },
+        { icon: ['fab', 'twitter'], url: '#' },
+        { icon: ['fab', 'google-plus-g'], url: '#' },
+        { icon: ['fab', 'youtube'], url: '#' },
+        { icon: ['fab', 'medium-m'], url: 'https://medium.com/@palliums' },
+        { icon: ['fab', 'github'], url: 'https://github.com/palliums' },
       ],
       links: [
-        { icon: ['fab', 'facebook-f'], url: '' },
-        { icon: ['fab', 'twitter'], url: '' },
-        { icon: ['fab', 'instagram'], url: '' },
+        { icon: ['fab', 'facebook-f'], url: 'http://www.facebook.com/Palliums/' },
+        { icon: ['fab', 'twitter'], url: '#' },
+        { icon: ['fab', 'instagram'], url: '#' },
       ]
     }
   },
   methods: {
     close: function(e) {
       this.showModal = false
+    },
+    openLink: function(url) {
+      window.open(url, '_blank')
     }
   }
 }
