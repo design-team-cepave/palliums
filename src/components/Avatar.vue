@@ -48,6 +48,9 @@
       position: relative;
       margin: 0 15px;
       width: 30%;
+      background: #FFFFFF;
+      box-shadow: 0 12px 35px 0 rgba(40,43,49,0.16);
+      border-radius: 12px;
       img {
         position: absolute;
         top: 0;
@@ -62,9 +65,6 @@
       }
       .card {
         padding: 70px 10% 20px;
-        background: #FFFFFF;
-        box-shadow: 0 12px 35px 0 rgba(40,43,49,0.16);
-        border-radius: 12px;
       }
       .title {
         margin: 15px auto;

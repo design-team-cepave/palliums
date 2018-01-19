@@ -511,17 +511,22 @@ li {
 .members {
   margin: auto;
   .group {
-    display: block;
+    display: flex;
+    align-items: stretch;
+    margin: 0 auto;
+    justify-content: center;
     max-width: 1350px;
     margin: 0 auto 50px;
     text-align: center;
     .avatar {
-      display: inline-block;   
-      vertical-align: top;   
+      display: inline-block;
+      vertical-align: top;
       text-align: center;
     }
     & + .group {
       text-align: center;
+      display: inherit;
+      margin-top: 60px;
     }
   }
 }
