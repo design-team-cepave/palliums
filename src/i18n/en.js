@@ -5,7 +5,7 @@ const en = {
   joinICO: 'Join ICO',
   developHistory: 'Development History',
   icoNews: {
-    label: 'ICO News',
+    label: 'Roadmap',
     news: [
       { date: '2015/5/1', content: 'Starting develop Gcoin' },
       { date: '2015/7/15', content: 'Develop Gcoin wallet mobile app' },
@@ -118,6 +118,10 @@ const en = {
   },
   media: {
     label: 'Media',
+  },
+  announcement: {
+    title: 'Notice',
+    content: 'PALLET will not have any form of presale, public sale, or private sale. Please be extra cautious and keep an eye out for scams.'
   },
   community: 'Community',
   subscribe: {

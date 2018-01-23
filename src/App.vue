@@ -9,7 +9,7 @@
         h1(v-t="'slogan'")
         .buttons
           p-button(:text="$t('whitepaper')", gradient="#FF8E64 0%,#FFE641 100%", text-color="white", shadow="0 6px 12px 0 rgba(40,43,49,0.16)")
-          p-button(:text="$t('joinICO')", shadow="0 6px 12px 0 rgba(40,43,49,0.16)", @click="showModal = true")
+          //- p-button(:text="$t('joinICO')", shadow="0 6px 12px 0 rgba(40,43,49,0.16)", @click="showModal = true")
       //  h1.what What is PALLET?
       //background(flat-color="white", height="245")
       //.laptop
@@ -73,13 +73,13 @@
               li(v-t="'icoUsage.cash.use4'")
               li(v-t="'icoUsage.cash.use5'")
         .toolbar
-          p-button(:text="$t('joinICO')", gradient="#FF8E64 0%,#FFE641 100%", text-color="white", :width="230", :height="50", shadow="0 6px 12px 0 rgba(40,43,49,0.16)", @click="showModal = true")
-      background(flat-color="#FFFFFF", id="members").section.members
-        h1(v-t="'members.label'")
-        .group
-          avatar(v-for="leader in leaders", :key="leader.id", :title="$t(leader.title)", :name="$t(leader.name)", :photo="leader.photo", :descript="$t(leader.descript)", :with-card="leader.isLeader")
-        .group
-          avatar(v-for="member in members", :key="member.id", :title="$t(member.title)", :name="$t(member.name)", :photo="member.photo", :with-card="member.isLeader")
+          //- p-button(:text="$t('joinICO')", gradient="#FF8E64 0%,#FFE641 100%", text-color="white", :width="230", :height="50", shadow="0 6px 12px 0 rgba(40,43,49,0.16)", @click="showModal = true")
+      //- background(flat-color="#FFFFFF", id="members").section.members
+      //-   h1(v-t="'members.label'")
+      //-   .group
+      //-     avatar(v-for="leader in leaders", :key="leader.id", :title="$t(leader.title)", :name="$t(leader.name)", :photo="leader.photo", :descript="$t(leader.descript)", :with-card="leader.isLeader")
+      //-   .group
+      //-     avatar(v-for="member in members", :key="member.id", :title="$t(member.title)", :name="$t(member.name)", :photo="member.photo", :with-card="member.isLeader")
       background(flat-color="#F8F9FA", id="faq").section.faq
         h1(v-t="'faq.longLabel'")
         accordion(v-for="question in questions", :key="question.id", :title="$t(question.title)", :content="$t(question.content)")
@@ -92,6 +92,10 @@
         grid(:data="medias")
       background(flat-color="#FFF").section.blank
         .brick(v-for="b in bricks", :key="b")
+      background(flat-color="#FFF").section.announcement
+        .board
+          h1(v-t="'announcement.title'")
+          .content(v-t="'announcement.content'")
       background(flat-color="#F8F9FA").section.community
         h1(v-t="'community'")
         .content
@@ -455,7 +459,7 @@ li {
   }
 }
 
-.ico, .members, .faq, .media, .blank, .community {
+.ico, .members, .faq, .media, .blank, .community, .announcement {
   h1 {
     color: #282B31;
   }
@@ -558,6 +562,23 @@ li {
     margin-right: 40px;
     &:last-child {
       margin-right: 0;
+    }
+  }
+}
+
+.announcement {
+  .board {
+    border: 5px solid #469AF4;
+    padding: 40px 50px;
+    width: 60%;
+    margin: 20px auto;
+
+    h1 {
+      margin-bottom: 30px;
+    }
+    .content {
+      margin-bottom: 30px;
+      font-weight: bold;
     }
   }
 }

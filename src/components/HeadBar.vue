@@ -8,7 +8,7 @@
       <li><a href="#" v-scroll-to="'#features'" v-t="'features.label'"></a></li>
       <li><a href="#" v-scroll-to="'#members'" v-t="'members.label'"></a></li>
       <li><a href="#" v-scroll-to="'#faq'" v-t="'faq.label'"></a></li>
-      <li class="other"><p-button :text="$t('joinICO')" @click="click" /></li>
+      <!-- <li class="other"><p-button :text="$t('joinICO')" @click="click" /></li> -->
       <li>
         <div class="overlay-selected">
           <span class="flag-icon" v-bind:class="locale.country"></span>

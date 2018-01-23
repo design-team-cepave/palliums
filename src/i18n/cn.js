@@ -5,7 +5,7 @@ const cn = {
   joinICO: '参与 ICO',
   developHistory: '开发历史',
   icoNews: {
-    label: 'ICO News',
+    label: 'Roadmap',
     news: [
       { date: '2015/5/1', content: '开始开发第一代区块链: Gcoin' },
       { date: '2015/7/15', content: '开发Gcoin移动版钱包' },
@@ -118,6 +118,10 @@ const cn = {
   },
   media: {
     label: '媒体',
+  },
+  announcement: {
+    title: '重要公告',
+    content: 'PALLET 没有任何形式的公募、私募、代投，请谨防遭遇诈骗受到损失。'
   },
   community: '社群',
   subscribe: {
