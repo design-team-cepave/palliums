@@ -53,26 +53,26 @@
       background(flat-color="#F8F9FA").section.faq
         h1(v-t="'icoNews.label'")
         accordion(v-for="news in newsList", :key="news.id", :title="$t(news.date)", :content="$t(news.content)")
-      background(flat-color="#F8F9FA").section.ico
-        h1(v-t="'tokenDistribution'")
-        .row
-          .card
-            img(src="./assets/token-card-bg.svg")
-            .title(v-t="'icoUsage.pali.label'")
-            .content
-              li(v-t="'icoUsage.pali.use1'")
-              li(v-t="'icoUsage.pali.use2'")
-              li(v-t="'icoUsage.pali.use3'")
-          .card
-            img(src="./assets/token-card-bg.svg")
-            .title(v-t="'icoUsage.cash.label'")
-            .content
-              li(v-t="'icoUsage.cash.use1'")
-              li(v-t="'icoUsage.cash.use2'")
-              li(v-t="'icoUsage.cash.use3'")
-              li(v-t="'icoUsage.cash.use4'")
-              li(v-t="'icoUsage.cash.use5'")
-        .toolbar
+      //- background(flat-color="#F8F9FA").section.ico
+      //-   h1(v-t="'tokenDistribution'")
+      //-   .row
+      //-     .card
+      //-       img(src="./assets/token-card-bg.svg")
+      //-       .title(v-t="'icoUsage.pali.label'")
+      //-       .content
+      //-         li(v-t="'icoUsage.pali.use1'")
+      //-         li(v-t="'icoUsage.pali.use2'")
+      //-         li(v-t="'icoUsage.pali.use3'")
+      //-     .card
+      //-       img(src="./assets/token-card-bg.svg")
+      //-       .title(v-t="'icoUsage.cash.label'")
+      //-       .content
+      //-         li(v-t="'icoUsage.cash.use1'")
+      //-         li(v-t="'icoUsage.cash.use2'")
+      //-         li(v-t="'icoUsage.cash.use3'")
+      //-         li(v-t="'icoUsage.cash.use4'")
+      //-         li(v-t="'icoUsage.cash.use5'")
+      //-   .toolbar
           //- p-button(:text="$t('joinICO')", gradient="#FF8E64 0%,#FFE641 100%", text-color="white", :width="230", :height="50", shadow="0 6px 12px 0 rgba(40,43,49,0.16)", @click="showModal = true")
       //- background(flat-color="#FFFFFF", id="members").section.members
       //-   h1(v-t="'members.label'")
@@ -189,7 +189,7 @@ export default {
         { id: 4, title: 'faq.questions[3].q', content: 'faq.questions[3].ans' },
         { id: 5, title: 'faq.questions[4].q', content: 'faq.questions[4].ans' },
         { id: 6, title: 'faq.questions[5].q', content: 'faq.questions[5].ans' },
-        { id: 7, title: 'faq.questions[6].q', content: 'faq.questions[6].ans' },
+        // { id: 7, title: 'faq.questions[6].q', content: 'faq.questions[6].ans' },
         { id: 8, title: 'faq.questions[7].q', content: 'faq.questions[7].ans' },
         { id: 9, title: 'faq.questions[8].q', content: 'faq.questions[8].ans' },
         { id: 10, title: 'faq.questions[9].q', content: 'faq.questions[9].ans' },
